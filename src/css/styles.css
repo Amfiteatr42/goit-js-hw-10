@@ -17,4 +17,22 @@ body {
   padding: 8px;
   max-width: 320px;
   margin-bottom: 16px;
+  margin-left: 10px;
+  border-radius: 5px;
+}
+
+.country-list {
+  list-style: none;
+  padding: 10;
+}
+
+.country-item {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  border: 1px solid teal;
+  border-radius: 5px;
+  max-width: 400px;
+  margin-top: 10px;
+  padding-left: 20px;
 }
