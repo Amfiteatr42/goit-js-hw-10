@@ -17,7 +17,7 @@ const searchParams = new URLSearchParams({
 refs.input.addEventListener('input', debounce(onInputSearch, DEBOUNCE_DELAY));
 
 function onInputSearch(e) {
-  if (e.target.value === '') return;
+  if (e.target.value === '') clearHTML('countryList', 'countryInfo');
   let searchName = e.target.value.trim();
 
   fetchCountries(
