@@ -17,8 +17,12 @@ const searchParams = new URLSearchParams({
 refs.input.addEventListener('input', debounce(onInputSearch, DEBOUNCE_DELAY));
 
 function onInputSearch(e) {
-  if (e.target.value === '') clearHTML('countryList', 'countryInfo');
   let searchName = e.target.value.trim();
+
+  if (searchName === '') {
+    clearHTML('countryList', 'countryInfo');
+    return;
+  }
 
   fetchCountries(
     `https://restcountries.com/v3.1/name/${searchName}?${searchParams}`
